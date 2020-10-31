@@ -2,12 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 class App extends React.Component {
-  constructor(props) {
-    super(props); // Reason to use super: Override React.Component's super() method inside.
+  // constructor(props) {
+  //   super(props); // Reason to use super: Override React.Component's super() method inside.
 
-    // THIS IS THE ONLY TIME we do direct assignment to this.state
-    this.state = { lat: null, errorMessage: "" };
-  }
+  //   // THIS IS THE ONLY TIME we do direct assignment to this.state
+  //   this.state = { lat: null, errorMessage: "" };
+  // }
+  state = { lat: null, errorMessage: '' };
 
   componentDidMount() {
     window.navigator.geolocation.getCurrentPosition(
